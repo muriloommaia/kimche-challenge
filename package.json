@@ -1,0 +1,29 @@
+{
+  "name": "dev-challenge-template-master",
+  "version": "1.0.0",
+  "description": "Kimche Challenge Template",
+  "scripts": {
+    "postinstall": "npx install husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muriloommaia/kimche-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muriloommaia/kimche-challenge/issues"
+  },
+  "homepage": "https://github.com/muriloommaia/kimche-challenge#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
