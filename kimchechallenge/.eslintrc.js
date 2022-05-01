@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb'
+    'airbnb',
   ],
   globals: {
     Atomics: 'readonly',
@@ -23,8 +23,8 @@ module.exports = {
     'react',
   ],
   rules: {
-    'jsx-filename-extension': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'import/prefer-default-export': 'off',
-    'jsx-quotes': ['error', 'prefer-single']
+    'jsx-quotes': ['error', 'prefer-single'],
   },
 };
