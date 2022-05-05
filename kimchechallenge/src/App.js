@@ -4,7 +4,6 @@ import client from './api/client';
 import './App.css';
 
 function App() {
-  const testLint = 0;
   return (
     <ApolloProvider client={client}>
       <div>
