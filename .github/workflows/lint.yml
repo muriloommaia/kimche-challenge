@@ -9,11 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Change Directory
-      run: cd kimchechallenge
-    - name: Install modules
-      run: yarn
-    - name: Where are we?
-      run: ls
-    - name: Run ESLint
-      run: yarn lint
+    - name: Run Lint
+      run: cd kimchechallenge && yarn && yarn lint
