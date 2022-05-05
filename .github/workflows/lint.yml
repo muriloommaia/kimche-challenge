@@ -14,4 +14,4 @@ jobs:
     - name: Change Directory
       run: cd kimchechallenge && ls
     - name: Run ESLint
-      run: npx eslint . --ext .js,.jsx,.ts,.tsx
+      run: eslint . --ext .js,.jsx,.ts,.tsx
