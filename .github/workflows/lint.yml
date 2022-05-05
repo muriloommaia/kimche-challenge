@@ -1,22 +1,15 @@
-name: Lint
-
-on:
+name: CI
+on: 
   pull_request:
   push:
     branches:
       - main
 jobs:
-  eslint:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: yarn install
-      - uses: sibiraj-s/action-eslint@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          eslint-args: "--ignore-path=.gitignore --quiet"
-          extensions: "js,jsx,ts,tsx"
-          annotations: true
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: yarn
+    - name: Run ESLint
+      run: eslint . --ext .js,.jsx,.ts,.tsx
