@@ -1,16 +1,17 @@
-import React from 'react';
-import './App.css';
 import { ApolloProvider } from '@apollo/client';
+import React from 'react';
 import client from './api/client';
+import './App.css';
 
 function App() {
+  const testLint = 0;
   return (
     <ApolloProvider client={client}>
       <div>
         <h2>
           My first Apollo app
           {' '}
-          <span role="img" aria-label="Rocket">
+          <span role='img' aria-label='Rocket'>
             🚀
           </span>
         </h2>
@@ -19,4 +20,3 @@ function App() {
   );
 }
 export default App;
-
