@@ -26,6 +26,14 @@ export default function Home() {
         .filter((language) => language.name.includes(searchLanguage)));
     dispatch(setFilter(data));
   }, [dispatch, countries]);
+
+  useEffect(() => {
+    if (continent) {
+      filterByContinent(search);
+    } else {
+      filterByLanguage(search);
+    }
+  }, [search, continent, filterByContinent, filterByLanguage]);
   return (
     <div>
       <Header />
