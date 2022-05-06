@@ -27,7 +27,7 @@ export default function UniqueBox({ country }) {
         {currency}
       </Paragraph>
       <Paragraph>
-        Number of languages:
+        Number of states:
         { ' ' }
         {states.length > 0 ? states.length : 'No states'}
       </Paragraph>
