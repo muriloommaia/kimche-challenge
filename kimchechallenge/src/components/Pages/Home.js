@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCountries } from '../../redux/slices/country.slice';
 import { setFilter } from '../../redux/slices/filter.slice';
 import { reduceContinent } from '../../utils/reduceContinent';
+import { reduceLanguage } from '../../utils/reduceLanguage.js';
 import { ContainerResult } from '../Containers/Container.Result';
 import Filters from '../Organisms/Filters';
 import Header from '../Organisms/Header';
@@ -28,7 +29,8 @@ export default function Home() {
   const filterByLanguage = useCallback((searchLanguage) => {
     const data = countries
       .filter((country) => country.name.includes(searchLanguage));
-    dispatch(setFilter(data));
+    const result = reduceLanguage(data);
+    dispatch(setFilter(result));
   }, [dispatch, countries]);
 
   useEffect(() => {
