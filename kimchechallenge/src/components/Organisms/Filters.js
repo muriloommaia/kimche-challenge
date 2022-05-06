@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../Atoms/Buton';
+import { Button } from '../Atoms/Button';
 import { Input } from '../Atoms/Input';
 import { Paragraph } from '../Atoms/Paragraph';
 
@@ -7,8 +7,12 @@ export default function Filters() {
   const [filters, setFilters] = useState('');
   const [continents, setContinents] = useState(false);
 
-  const handleClick = () => {
-    setContinents(!continents);
+  const handleClick = ({ target: { id } }) => {
+    if (id === 'continent') {
+      setContinents(true);
+    } else {
+      setContinents(false);
+    }
   };
 
   return (
@@ -28,10 +32,19 @@ export default function Filters() {
         </Paragraph>
         <Button
           type='button'
+          id='continent'
           onClick={handleClick}
           selected={continents}
         >
           Continent
+        </Button>
+        <Button
+          type='button'
+          id='language'
+          onClick={handleClick}
+          selected={!continents}
+        >
+          Language
         </Button>
       </div>
 
