@@ -5,6 +5,7 @@ export const slice = createSlice({
   initialState: {
     continent: true,
     search: '',
+    filtered: [],
   },
   reducers: {
     setGroup(state, { payload }) {
@@ -13,9 +14,12 @@ export const slice = createSlice({
     setSearch(state, { payload }) {
       return { ...state, search: payload };
     },
+    setFilter(state, { payload }) {
+      return { ...state, filtered: payload };
+    },
   },
 });
 
-export const { setGroup, setSearch } = slice.actions;
+export const { setGroup, setSearch, setFilter } = slice.actions;
 
 export default slice.reducer;
