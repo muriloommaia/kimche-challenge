@@ -4,6 +4,12 @@ import { Input } from '../Atoms/Input';
 import { Paragraph } from '../Atoms/Paragraph';
 
 export default function Filters() {
+  const [filters, setFilters] = useState('');
+  const [continents, setContinents] = useState(false);
+
+  const handleClick = () => {
+    setContinents(!continents);
+  };
 
   return (
     <div>
@@ -13,6 +19,8 @@ export default function Filters() {
       <Input
         type='text'
         placeholder='Search'
+        value={filters}
+        onChange={(e) => setFilters(e.target.value)}
       />
       <div>
         <Paragraph>
@@ -20,6 +28,8 @@ export default function Filters() {
         </Paragraph>
         <Button
           type='button'
+          onClick={handleClick}
+          selected={continents}
         >
           Continent
         </Button>
