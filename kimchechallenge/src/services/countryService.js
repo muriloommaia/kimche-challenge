@@ -4,9 +4,22 @@ import client from '../api/client';
 const LIST_COUNTRIES = gql`
   {
     countries {
+    name,
+    native,
+    states {
+    name
+    },
+    phone,
+    emoji,
+    currency,
+    continent {
+    name,
+    },
+    code,
+    languages {
       name
-      code
     }
+  }
   }
 `;
 
