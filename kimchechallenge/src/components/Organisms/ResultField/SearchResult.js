@@ -5,7 +5,7 @@ export default function SearchResult() {
   const data = [[]];
   return (
     <div>
-      {data.map((item) => <BoxGroup key='box' item={item} />)}
+      {data.map((items) => <BoxGroup key='box' items={items} />)}
     </div>
   );
 }
