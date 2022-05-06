@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setGroup, setSearch } from '../../redux/slices/filter.slice';
 import { Button } from '../Atoms/Button';
 import { Input } from '../Atoms/Input';
 import { Paragraph } from '../Atoms/Paragraph';
@@ -6,13 +8,21 @@ import { Paragraph } from '../Atoms/Paragraph';
 export default function Filters() {
   const [filters, setFilters] = useState('');
   const [continents, setContinents] = useState(false);
+  const dispatch = useDispatch();
 
   const handleClick = ({ target: { id } }) => {
     if (id === 'continent') {
       setContinents(true);
+      dispatch(setGroup(true));
     } else {
       setContinents(false);
+      dispatch(setGroup(false));
     }
+  };
+
+  const handleChange = ({ target: { value } }) => {
+    setFilters(value);
+    dispatch(setSearch(value));
   };
 
   return (
@@ -24,7 +34,7 @@ export default function Filters() {
         type='text'
         placeholder='Search'
         value={filters}
-        onChange={(e) => setFilters(e.target.value)}
+        onChange={handleChange}
       />
       <div>
         <Paragraph>
