@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries } from '../../redux/slices/country.slice';
 import { setFilter } from '../../redux/slices/filter.slice';
+import { reduceContinent } from '../../utils/reduceContinent';
 import { ContainerResult } from '../Containers/Container.Result';
 import Filters from '../Organisms/Filters';
 import Header from '../Organisms/Header';
@@ -16,14 +17,17 @@ export default function Home() {
   }, [dispatch, countries]);
 
   const filterByContinent = useCallback((searchContinent) => {
-    const data = countries.filter((country) => country.continent.name.includes(searchContinent));
-    dispatch(setFilter(data));
+    const data = countries
+      .filter((country) => country.name.includes(searchContinent));
+
+    const result = reduceContinent(data);
+
+    dispatch(setFilter(result));
   }, [dispatch, countries]);
 
   const filterByLanguage = useCallback((searchLanguage) => {
     const data = countries
-      .filter((country) => country.languages
-        .filter((language) => language.name.includes(searchLanguage)));
+      .filter((country) => country.name.includes(searchLanguage));
     dispatch(setFilter(data));
   }, [dispatch, countries]);
 
