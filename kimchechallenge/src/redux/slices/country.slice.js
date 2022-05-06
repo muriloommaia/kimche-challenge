@@ -16,16 +16,19 @@ export const slice = createSlice({
   name: 'country',
   initialState: {
     data: [],
-    continent: true,
+    loading: false,
   },
-  reducers: {
-    setGroup(state, { payload }) {
-      return { ...state, continent: payload };
-    },
-  },
+  reducers: {},
   extraReducers: {
+    [getCountries.pending]: (state) => {
+      state.loading = true;
+    },
     [getCountries.fulfilled]: (state, { payload }) => {
+      state.loading = false;
       state.data = payload;
+    },
+    [getCountries.rejected]: (state) => {
+      state.loading = false;
     },
   },
 });
