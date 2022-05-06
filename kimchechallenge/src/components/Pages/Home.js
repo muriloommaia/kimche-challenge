@@ -14,6 +14,18 @@ export default function Home() {
   useEffect(() => {
     dispatch(getCountries());
   }, [dispatch, countries]);
+
+  const filterByContinent = useCallback((searchContinent) => {
+    const data = countries.filter((country) => country.continent.name.includes(searchContinent));
+    dispatch(setFilter(data));
+  }, [dispatch, countries]);
+
+  const filterByLanguage = useCallback((searchLanguage) => {
+    const data = countries
+      .filter((country) => country.languages
+        .filter((language) => language.name.includes(searchLanguage)));
+    dispatch(setFilter(data));
+  }, [dispatch, countries]);
   return (
     <div>
       <Header />
