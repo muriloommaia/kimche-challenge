@@ -3,14 +3,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Paragraph } from '../../Atoms/Paragraph';
-import { BoxOneCountry } from '../../Containers/Container.Unique';
+import { BoxCountryStyle } from '../../Containers/Container.Box.Country';
 
 export default function UniqueBox({ country }) {
   const {
     name, emoji, native, states, languages, code, currency,
   } = country;
   return (
-    <BoxOneCountry>
+    <BoxCountryStyle>
       <Paragraph>
         {name}
         {emoji}
@@ -36,7 +36,7 @@ export default function UniqueBox({ country }) {
         { ' '}
         {languages.length > 0 ? languages.length : 'No languages'}
       </Paragraph>
-    </BoxOneCountry>
+    </BoxCountryStyle>
   );
 }
 
