@@ -17,7 +17,6 @@ export default function SearchResult() {
   if (loading) return <Loading />;
   return (
     <div>
-      <Loading />
       {countries.map((items) => (
         <BoxGroup key={items[0]} items={items[1]} name={items[0]} />
       ))}
