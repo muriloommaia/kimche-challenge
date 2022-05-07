@@ -7,7 +7,6 @@ export const getCountries = createAsyncThunk(
   'country/getCountries',
   async (thunkApi) => {
     const { data } = await countryService.getCountries();
-
     return data.countries;
   },
 );
