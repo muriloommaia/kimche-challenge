@@ -1,6 +1,11 @@
-import tw from 'tailwind-styled-components/dist/tailwind';
+import styled from 'styled-components';
 
-export const Button = tw.button`
-  p-3 py-4 border-y-4 border-x-2 border-black
-  ${({ selected }) => (selected ? 'bg-gray-400' : 'bg-gray-300')}
+export const Button = styled.button`
+  padding: 1rem 0.75rem;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-color: black;
+  background-color: ${({ selected }) => (selected ? 'rgb(156 163 175)' : 'rgb(209 213 219)')};
 `;

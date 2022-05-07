@@ -1,3 +1,8 @@
-import tw from 'tailwind-styled-components';
+import styled from 'styled-components';
 
-export const Title = tw.h1`text-4xl font-bold text-center`;
+export const Title = styled.h1`
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+`;

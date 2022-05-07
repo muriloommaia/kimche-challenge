@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import Loading from '../../Atoms/Loading';
+import Loading from '../Loading/Loading';
 import BoxGroup from './BoxGroup';
 
 export default function SearchResult() {
