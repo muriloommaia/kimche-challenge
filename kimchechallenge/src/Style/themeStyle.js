@@ -1,3 +1,4 @@
+import texture from '../assets/images/blizzard.png';
 import points from '../assets/images/points.png';
 
 export const theme = {
@@ -8,5 +9,6 @@ export const theme = {
   },
   textures: {
     primary: points,
+    secondary: texture,
   },
 };
