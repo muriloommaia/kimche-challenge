@@ -6,4 +6,14 @@ export function usePagination({ items }) {
   const [endIndex, setEndIndex] = useState(NUMBER_ITEMS);
   const [nextEnabled, setNextEnabled] = useState(false);
   const [prevEnabled, setPrevEnabled] = useState(false);
+
+  useEffect(() => {
+    if (items <= NUMBER_ITEMS) {
+      setNextEnabled(false);
+      setPrevEnabled(false);
+    } else {
+      setNextEnabled(true);
+      setPrevEnabled(false);
+    }
+  }, [items]);
 }
