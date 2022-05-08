@@ -28,12 +28,15 @@ export default function Filters() {
 
   return (
     <Flex
-      padding='2.1rem 0'
+      padding='2.1rem 1rem'
       direction='column'
       align='center'
       borderBottom='2px solid #ccc'
     >
-      <Paragraph color='gray'>
+      <Paragraph
+        color='gray'
+        padding='0px 0px 1rem 0px'
+      >
         Some random text
       </Paragraph>
       <Flex
@@ -47,22 +50,24 @@ export default function Filters() {
           <Paragraph>
             Group by:
           </Paragraph>
-          <Button
-            type='button'
-            id='continent'
-            onClick={handleClick}
-            selected={continents}
-          >
-            Continent
-          </Button>
-          <Button
-            type='button'
-            id='language'
-            onClick={handleClick}
-            selected={!continents}
-          >
-            Language
-          </Button>
+          <div>
+            <Button
+              type='button'
+              id='continent'
+              onClick={handleClick}
+              selected={continents}
+            >
+              Continent
+            </Button>
+            <Button
+              type='button'
+              id='language'
+              onClick={handleClick}
+              selected={!continents}
+            >
+              Language
+            </Button>
+          </div>
         </Flex>
         <Flex
           align='center'
