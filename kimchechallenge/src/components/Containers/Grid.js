@@ -13,6 +13,5 @@ export const GridComponent = styled.div`
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   gap: 1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding: ${({ padding }) => padding};
 `;

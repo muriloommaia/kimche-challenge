@@ -15,5 +15,6 @@ export const Flex = styled.div`
   border-bottom: ${({ borderBottom }) => borderBottom};
   border-color: ${({ borderColor, theme }) => (theme.colors[borderColor] ? theme.colors[borderColor] : borderColor)};
   border-radius: ${({ borderRadius }) => borderRadius};
+  flex: ${({ flex }) => flex};
   width: ${({ width }) => width};
 `;
