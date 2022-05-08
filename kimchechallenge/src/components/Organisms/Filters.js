@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setGroup, setSearch } from '../../redux/slices/filter.slice';
@@ -40,7 +41,7 @@ export default function Filters() {
         Some random text
       </Paragraph>
       <Flex
-        justify='space-around'
+        justify='space-between'
         width='100%'
       >
         <Flex
@@ -72,15 +73,23 @@ export default function Filters() {
         <Flex
           align='center'
         >
-          <Input
-            type='text'
-            align='center'
-            margin='0 0.1rem 0  0'
-            placeholder='Search a Country'
-            value={filters}
-            onChange={handleChange}
-          />
-          <i className='fa-solid fa-magnifying-glass' />
+          <Flex
+            border='1px solid black'
+            borderRadius='0.25rem'
+            padding='0.3rem 0.5rem'
+          >
+            <label htmlFor='search'>
+              <Input
+                type='text'
+                id='search'
+                margin='0 0.5rem 0  0'
+                placeholder='Search a Country'
+                value={filters}
+                onChange={handleChange}
+              />
+              <i className='fa-solid fa-magnifying-glass' />
+            </label>
+          </Flex>
         </Flex>
       </Flex>
 
