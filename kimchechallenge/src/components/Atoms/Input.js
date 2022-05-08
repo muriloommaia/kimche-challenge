@@ -8,7 +8,10 @@ export const Input = styled.input`
   font-weight: 700;
   width: 180px;
   text-align: ${({ align }) => align};
-  border: 1px solid rgb(0 0 0 / var(--tw-text-opacity));
-  border-radius: 0.375rem;
+  :focus {
+    outline: none;
+  }
+  border: ${({ border }) => border};
+  border-radius: ${({ borderRadius }) => borderRadius};
   margin: ${({ margin }) => margin};
 `;
