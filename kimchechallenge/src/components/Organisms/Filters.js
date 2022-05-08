@@ -9,7 +9,7 @@ import { Flex } from '../Containers/Flex';
 
 export default function Filters() {
   const [filters, setFilters] = useState('');
-  const [continents, setContinents] = useState(false);
+  const [continents, setContinents] = useState(true);
   const dispatch = useDispatch();
 
   const handleClick = ({ target: { id } }) => {
