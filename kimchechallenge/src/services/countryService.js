@@ -10,6 +10,7 @@ const LIST_COUNTRIES = gql`
     name
     },
     phone,
+    capital,
     emoji,
     currency,
     continent {
