@@ -16,4 +16,33 @@ export function usePagination({ items }) {
       setPrevEnabled(false);
     }
   }, [items]);
+
+  const setNextPage = useCallback(() => {
+    const newEnd = endIndex + NUMBER_ITEMS;
+    console.log(nextEnabled);
+    if (newEnd < items) {
+      setStartIndex(startIndex + NUMBER_ITEMS);
+      setEndIndex(newEnd);
+      setNextEnabled(true);
+    } else {
+      setStartIndex(items - NUMBER_ITEMS);
+      setEndIndex(items);
+      setNextEnabled(false);
+    }
+    setPrevEnabled(true);
+  }, [endIndex, items, startIndex, nextEnabled]);
+
+  const setPrevPage = useCallback(() => {
+    const newStart = startIndex - NUMBER_ITEMS;
+    if (newStart > 0) {
+      setStartIndex(newStart);
+      setEndIndex(endIndex - NUMBER_ITEMS);
+      setPrevEnabled(true);
+    } else {
+      setStartIndex(0);
+      setEndIndex(NUMBER_ITEMS);
+      setPrevEnabled(false);
+    }
+    setNextEnabled(true);
+  }, [endIndex, startIndex]);
 }
