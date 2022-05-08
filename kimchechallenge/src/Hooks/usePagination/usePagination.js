@@ -45,4 +45,12 @@ export function usePagination({ items }) {
     }
     setNextEnabled(true);
   }, [endIndex, startIndex]);
+  return {
+    setNextPage,
+    setPrevPage,
+    startIndex,
+    endIndex,
+    nextEnabled,
+    prevEnabled,
+  };
 }
