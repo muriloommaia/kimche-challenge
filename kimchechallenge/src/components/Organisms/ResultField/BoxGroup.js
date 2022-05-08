@@ -1,12 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Flex } from '../../Containers/Flex';
 import { GridComponent } from '../../Containers/Grid';
 import UniqueBox from './UniqueBox';
 
 export default function BoxGroup({ items, name }) {
   return (
-    <div>
+    <Flex
+      direction='column'
+      padding='0px 30px'
+    >
       <p>
         {name}
       </p>
@@ -15,7 +19,7 @@ export default function BoxGroup({ items, name }) {
           <UniqueBox key={country.name} country={country} />
         ))}
       </GridComponent>
-    </div>
+    </Flex>
   );
 }
 
