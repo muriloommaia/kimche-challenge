@@ -9,7 +9,7 @@ export const GridComponent = styled.div`
     @media (min-width: 920px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1260px) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   gap: 1rem;
