@@ -28,9 +28,10 @@ export default function Filters() {
 
   return (
     <Flex
-      padding='1rem 0 0 1rem'
+      padding='2.1rem 0'
       direction='column'
       align='center'
+      borderBottom='2px solid #ccc'
     >
       <Paragraph color='gray'>
         Some random text
@@ -41,6 +42,7 @@ export default function Filters() {
       >
         <Flex
           align='center'
+          wrap='wrap'
         >
           <Paragraph>
             Group by:
@@ -62,12 +64,19 @@ export default function Filters() {
             Language
           </Button>
         </Flex>
-        <Input
-          type='text'
-          placeholder='Search'
-          value={filters}
-          onChange={handleChange}
-        />
+        <Flex
+          align='center'
+        >
+          <Input
+            type='text'
+            align='center'
+            margin='0 0.1rem 0  0'
+            placeholder='Search a Country'
+            value={filters}
+            onChange={handleChange}
+          />
+          <i className='fa-solid fa-magnifying-glass' />
+        </Flex>
       </Flex>
 
     </Flex>
