@@ -47,14 +47,44 @@ export default function BoxGroup({ items, name }) {
           color='primary'
         />
       </Flex>
-      <GridComponent
-        cols={3}
-        padding='1rem 3.75rem'
-      >
-        {items.map((country) => (
-          <UniqueBox key={country.name} country={country} />
-        ))}
-      </GridComponent>
+      <Flex>
+        <Button
+          type='button'
+          onClick={setPrevPage}
+          disabled={!prevEnabled}
+          hoverColor='primary'
+          border='0px'
+          hidden={!prevEnabled}
+          fontSize='2.0rem'
+          color='primary'
+        >
+          <i className='fa-solid fa-angle-left' />
+
+        </Button>
+
+        <GridComponent
+          cols={3}
+          padding='1rem 2rem'
+        >
+          {items.slice(startIndex, endIndex).map((country) => (
+            <UniqueBox key={country.name} country={country} />
+          ))}
+        </GridComponent>
+        <Button
+          type='button'
+          onClick={setNextPage}
+          disabled={!nextEnabled}
+          border='0px'
+          hidden={!nextEnabled}
+          hoverColor='primary'
+          fontSize='2.0rem'
+          color='primary'
+        >
+          <i className='fa-solid fa-angle-right' />
+        </Button>
+
+      </Flex>
+
     </Flex>
   );
 }
