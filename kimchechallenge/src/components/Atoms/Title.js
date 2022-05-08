@@ -5,4 +5,6 @@ export const Title = styled.h1`
   line-height: 2.5rem;
   text-align: center;
   font-weight: 700;
+  color: ${({ theme }) => theme.colors.secondary};
+  text-transform: uppercase;
 `;
