@@ -32,7 +32,6 @@ export default function Filters() {
       padding='2.1rem 1rem'
       direction='column'
       align='center'
-      borderBottom='2px solid #ccc'
     >
       <Paragraph
         color='gray'
@@ -80,7 +79,7 @@ export default function Filters() {
           >
             <label htmlFor='search'>
               <Input
-                type='text'
+                type='search'
                 id='search'
                 margin='0 0.5rem 0  0'
                 placeholder='Search a Country'
