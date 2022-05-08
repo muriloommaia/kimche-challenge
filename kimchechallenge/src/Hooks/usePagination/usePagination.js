@@ -19,7 +19,6 @@ export function usePagination({ items }) {
 
   const setNextPage = useCallback(() => {
     const newEnd = endIndex + NUMBER_ITEMS;
-    console.log(nextEnabled);
     if (newEnd < items) {
       setStartIndex(startIndex + NUMBER_ITEMS);
       setEndIndex(newEnd);
@@ -30,7 +29,7 @@ export function usePagination({ items }) {
       setNextEnabled(false);
     }
     setPrevEnabled(true);
-  }, [endIndex, items, startIndex, nextEnabled]);
+  }, [endIndex, items, startIndex]);
 
   const setPrevPage = useCallback(() => {
     const newStart = startIndex - NUMBER_ITEMS;
