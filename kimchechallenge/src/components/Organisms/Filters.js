@@ -76,6 +76,7 @@ export default function Filters() {
             border='1px solid black'
             borderRadius='0.25rem'
             padding='0.3rem 0.5rem'
+            wrap='nowrap'
           >
             <label htmlFor='search'>
               <Input
@@ -86,8 +87,8 @@ export default function Filters() {
                 value={filters}
                 onChange={handleChange}
               />
-              <i className='fa-solid fa-magnifying-glass' />
             </label>
+            <i className='fa-solid fa-magnifying-glass' />
           </Flex>
         </Flex>
       </Flex>

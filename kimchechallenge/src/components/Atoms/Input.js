@@ -6,7 +6,7 @@ export const Input = styled.input`
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
-  width: 180px;
+  width: 130px;
   text-align: ${({ align }) => align};
   :focus {
     outline: none;
