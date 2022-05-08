@@ -25,17 +25,37 @@ export default function UniqueBox({ country }) {
       </Paragraph>
       <Paragraph>
         {currency}
-      </Paragraph>
-      <Paragraph>
-        Number of states:
-        { ' ' }
-        {states.length > 0 ? states.length : 'No states'}
-      </Paragraph>
-      <Paragraph>
-        Number of languages:
-        { ' '}
-        {languages.length > 0 ? languages.length : 'No languages'}
-      </Paragraph>
+      <Flex>
+        <Flex
+          direction='column'
+          width='50%'
+          align='center'
+          borderColor='black'
+          borderRight='1px solid'
+          borderTop='1px solid'
+        >
+          <p>
+            States
+          </p>
+          <p>
+            {states.length > 0 ? states.length : 'No states'}
+          </p>
+        </Flex>
+        <Flex
+          direction='column'
+          width='50%'
+          align='center'
+          borderColor='black'
+          borderTop='1px solid'
+        >
+          <p>
+            Languages
+          </p>
+          <p>
+            {languages.length > 0 ? languages.length : 'No languages'}
+          </p>
+        </Flex>
+      </Flex>
     </BoxCountryStyle>
   );
 }
