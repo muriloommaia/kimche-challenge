@@ -9,5 +9,5 @@ export const BoxCountryStyle = styled.div`
   border-bottom-width: 3px;
   border-right-width: 3px;
   border-radius: 0.25rem;
-  min-width: 270px;
+  width: 270;
 `;
