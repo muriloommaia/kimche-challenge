@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
 import React from 'react';
+import { usePagination } from '../../../Hooks/usePagination/usePagination';
+import { Button } from '../../Atoms/Button';
 import { Line } from '../../Atoms/Line';
 import { Paragraph } from '../../Atoms/Paragraph';
 import { Flex } from '../../Containers/Flex';
@@ -8,6 +10,14 @@ import { GridComponent } from '../../Containers/Grid';
 import UniqueBox from './UniqueBox';
 
 export default function BoxGroup({ items, name }) {
+  const {
+    setNextPage,
+    setPrevPage,
+    nextEnabled,
+    prevEnabled,
+    startIndex,
+    endIndex,
+  } = usePagination({ items: items.length });
   return (
     <Flex
       direction='column'
