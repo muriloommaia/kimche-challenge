@@ -3,7 +3,7 @@ import points from '../assets/images/points.png';
 export const theme = {
   colors: {
     primary: '#2F80AC',
-    secondary: 'black',
+    secondary: '#fff',
     tertiary: '#000',
   },
   textures: {
