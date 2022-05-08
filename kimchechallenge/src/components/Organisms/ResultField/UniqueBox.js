@@ -45,6 +45,7 @@ export default function UniqueBox({ country }) {
             direction='column'
             width='50%'
             align='center'
+            text='center'
             borderColor='black'
             borderTop='1px solid'
             padding='0.2rem 0'
@@ -52,9 +53,9 @@ export default function UniqueBox({ country }) {
             <p>
               Capital
             </p>
-            <p>
+            <Paragraph text='center' lineHeight='1.5rem'>
               {capital}
-            </p>
+            </Paragraph>
           </Flex>
           <Flex
             direction='column'
