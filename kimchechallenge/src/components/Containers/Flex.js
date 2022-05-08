@@ -8,11 +8,12 @@ export const Flex = styled.div`
   flex-direction: ${({ direction }) => direction};
   padding: ${({ padding }) => padding};
   margin: ${({ margin }) => margin};
+  border: ${({ border }) => border};
   border-left: ${({ borderLeft }) => borderLeft};
   border-right: ${({ borderRight }) => borderRight};
   border-top: ${({ borderTop }) => borderTop};
   border-bottom: ${({ borderBottom }) => borderBottom};
-  border-color: ${({ borderColor, theme }) => theme.colors[borderColor]};
+  border-color: ${({ borderColor, theme }) => (theme.colors[borderColor] ? theme.colors[borderColor] : borderColor)};
   border-radius: ${({ borderRadius }) => borderRadius};
   width: ${({ width }) => width};
 `;
