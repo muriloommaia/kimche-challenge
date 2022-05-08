@@ -4,6 +4,7 @@ import { setGroup, setSearch } from '../../redux/slices/filter.slice';
 import { Button } from '../Atoms/Button';
 import { Input } from '../Atoms/Input';
 import { Paragraph } from '../Atoms/Paragraph';
+import { Flex } from '../Containers/Flex';
 
 export default function Filters() {
   const [filters, setFilters] = useState('');
@@ -26,38 +27,49 @@ export default function Filters() {
   };
 
   return (
-    <div>
+    <Flex
+      padding='1rem 0 0 1rem'
+      direction='column'
+      align='center'
+    >
       <Paragraph color='gray'>
         Some random text
       </Paragraph>
-      <Input
-        type='text'
-        placeholder='Search'
-        value={filters}
-        onChange={handleChange}
-      />
-      <div>
-        <Paragraph>
-          Group by:
-        </Paragraph>
-        <Button
-          type='button'
-          id='continent'
-          onClick={handleClick}
-          selected={continents}
+      <Flex
+        justify='space-around'
+        width='100%'
+      >
+        <Flex
+          align='center'
         >
-          Continent
-        </Button>
-        <Button
-          type='button'
-          id='language'
-          onClick={handleClick}
-          selected={!continents}
-        >
-          Language
-        </Button>
-      </div>
+          <Paragraph>
+            Group by:
+          </Paragraph>
+          <Button
+            type='button'
+            id='continent'
+            onClick={handleClick}
+            selected={continents}
+          >
+            Continent
+          </Button>
+          <Button
+            type='button'
+            id='language'
+            onClick={handleClick}
+            selected={!continents}
+          >
+            Language
+          </Button>
+        </Flex>
+        <Input
+          type='text'
+          placeholder='Search'
+          value={filters}
+          onChange={handleChange}
+        />
+      </Flex>
 
-    </div>
+    </Flex>
   );
 }
