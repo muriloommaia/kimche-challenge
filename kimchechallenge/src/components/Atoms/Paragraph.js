@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Paragraph = styled.p`
-  color: ${({ color }) => (color || '#000')};
+  color: ${({ color, theme }) => (theme.colors[color] || '#000')};
   padding: ${({ padding }) => (padding || '0px')};
-  font-size: ${({ fontSize }) => (fontSize || '1rem')};
+  font-size: ${({ fontSize }) => (fontSize)};
   width: ${({ width }) => (width || 'auto')};
-  line-height: ${({ lineHeight }) => (lineHeight || '2.75rem')};
+  line-height: ${({ lineHeight }) => (lineHeight)};
   text-align: ${({ text }) => (text || 'left')};
 `;
