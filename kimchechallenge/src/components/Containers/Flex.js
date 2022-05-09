@@ -17,4 +17,5 @@ export const Flex = styled.div`
   border-radius: ${({ borderRadius }) => borderRadius};
   flex: ${({ flex }) => flex};
   width: ${({ width }) => width};
+  min-height: ${({ minHeight }) => minHeight};
 `;
