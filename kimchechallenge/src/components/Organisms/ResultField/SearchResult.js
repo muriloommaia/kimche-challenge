@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Background } from '../../Containers/Container.Background';
 import Loading from '../Loading/Loading';
 import BoxGroup from './BoxGroup';
 
@@ -17,12 +16,10 @@ export default function SearchResult() {
   }, [filtered]);
   if (loading) return <Loading />;
   return (
-    <Background
-      image='secondary'
-    >
+    <div>
       {countries.map((items) => (
         <BoxGroup key={items[0]} items={items[1]} name={items[0]} />
       ))}
-    </Background>
+    </div>
   );
 }
