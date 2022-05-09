@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -37,7 +38,7 @@ export default function Filters() {
         color='gray'
         padding='0px 0px 1rem 0px'
       >
-        Some random text
+        Search for a country through the search filter, being able to use the grouping by continent or language
       </Paragraph>
       <Flex
         justify='space-between'
