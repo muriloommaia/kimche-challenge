@@ -26,6 +26,7 @@ export default function BoxGroup({ items, name }) {
       <Flex
         align='center'
         justify='space-between'
+        width='98vw'
       >
         <Line
           width='3.75rem'
