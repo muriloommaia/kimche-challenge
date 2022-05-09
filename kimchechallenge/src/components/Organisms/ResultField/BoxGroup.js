@@ -66,7 +66,6 @@ export default function BoxGroup({ items, name }) {
             <i className='fa-solid fa-angle-left' />
 
           </Button>
-
           <GridComponent
             cols={3}
             padding='1rem 2rem'
@@ -87,9 +86,7 @@ export default function BoxGroup({ items, name }) {
           >
             <i className='fa-solid fa-angle-right' />
           </Button>
-
         </Flex>
-
       </Flex>
     </MediaScreen>
   );
