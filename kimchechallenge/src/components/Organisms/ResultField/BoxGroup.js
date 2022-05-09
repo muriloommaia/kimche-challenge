@@ -31,7 +31,6 @@ export default function BoxGroup({ items, name }) {
         <Flex
           align='center'
           justify='space-between'
-          width='98vw'
         >
           <Line
             width='3.75rem'
@@ -47,7 +46,7 @@ export default function BoxGroup({ items, name }) {
             {name}
           </Paragraph>
           <Line
-            flex='2 2 auto'
+            flex=' 2 auto'
             borderWidth='3px'
             height='4px'
             color='primary'
@@ -60,7 +59,7 @@ export default function BoxGroup({ items, name }) {
             disabled={!prevEnabled}
             hoverColor='primary'
             border='0px'
-            hidden={!prevEnabled}
+            visibility={!prevEnabled}
             fontSize='2.0rem'
             color='primary'
           >
@@ -81,7 +80,7 @@ export default function BoxGroup({ items, name }) {
             onClick={setNextPage}
             disabled={!nextEnabled}
             border='0px'
-            hidden={!nextEnabled}
+            visibility={!nextEnabled}
             hoverColor='primary'
             fontSize='2.0rem'
             color='primary'

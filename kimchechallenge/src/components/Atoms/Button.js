@@ -4,7 +4,8 @@ export const Button = styled.button`
   padding: .2rem .5rem;
   height: auto;
   display: ${({ display }) => display};
-  display: ${({ hidden }) => hidden};
+  /* display: ${({ hidden }) => hidden}; */
+  visibility: ${({ visibility }) => (visibility ? 'hidden' : 'visible')};
   color: ${({ selected, theme }) => (selected ? theme.colors.secondary : theme.colors.tertiary)};
   margin-left: .5rem;
   color: ${({ color, theme }) => theme.colors[color] || color};
