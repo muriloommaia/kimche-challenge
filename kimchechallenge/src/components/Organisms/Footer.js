@@ -11,6 +11,7 @@ export default function Footer() {
     <Background
       color='primary'
       width='100%'
+      image='primary'
     >
       <MediaScreen
         xlWidth='1280px'
