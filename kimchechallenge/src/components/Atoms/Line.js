@@ -5,5 +5,5 @@ export const Line = styled.div`
   height: ${({ height }) => height};
   flex: ${({ flex }) => flex};
   border-style: ${({ borderStyle }) => borderStyle};
-  background-color: ${({ color, theme }) => theme.colors[color] || color};
+  background-color: ${({ color, theme }) => theme.colors[color] || color || 'black'};
 `;
