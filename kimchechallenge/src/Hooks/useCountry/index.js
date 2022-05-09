@@ -14,7 +14,7 @@ export function useCountry() {
 
   const filterByContinent = useCallback((searchContinent) => {
     const data = countries
-      .filter((country) => country.name.includes(searchContinent));
+      .filter((country) => country.name.toLowerCase().includes(searchContinent.toLowerCase()));
 
     const result = reduceContinent(data);
 
@@ -23,7 +23,7 @@ export function useCountry() {
 
   const filterByLanguage = useCallback((searchLanguage) => {
     const data = countries
-      .filter((country) => country.name.includes(searchLanguage));
+      .filter((country) => country.name.toLowerCase().includes(searchLanguage.toLowerCase()));
     const result = reduceLanguage(data);
     dispatch(setFilter(result));
   }, [dispatch, countries]);
