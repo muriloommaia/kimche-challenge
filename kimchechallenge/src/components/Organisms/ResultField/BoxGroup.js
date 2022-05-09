@@ -59,7 +59,7 @@ export default function BoxGroup({ items, name }) {
             disabled={!prevEnabled}
             hoverColor='primary'
             border='0px'
-            visibility={!prevEnabled}
+            visibility={!prevEnabled ? 1 : 0}
             fontSize='2.0rem'
             color='primary'
           >
@@ -80,7 +80,7 @@ export default function BoxGroup({ items, name }) {
             onClick={setNextPage}
             disabled={!nextEnabled}
             border='0px'
-            visibility={!nextEnabled}
+            visibility={!nextEnabled ? 1 : 0}
             hoverColor='primary'
             fontSize='2.0rem'
             color='primary'
