@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Kimche Challenge Template",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "(cd kimchechallenge && yarn start)",
+    "compose:up": "docker-compose up -d",
+    "compose:down": "docker-compose down"
   },
   "repository": {
     "type": "git",
