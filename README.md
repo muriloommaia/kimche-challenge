@@ -1,7 +1,18 @@
 # Desafío para Software Engineers
 
-Nombre postulante: [TU NOMBRE]
-Link a la app en producción: [LINK DEL DEPLOY]
+Nombre postulante: Murilo Moura Maia
+Link a la app en producción: https://kimche-challenge-murilo.herokuapp.com/
+
+## Pregunta Abierta
+
+### Pregunta:
+"La tabla que contiene la información correspondiente a la asistencia diaria de un niño en un colegio tiene 90 millones de filas. Todas las tablas del sistema existen en la misma BDD en MySQL. La lógica del backend que actualiza la información correspondiente al pasar la asistencia tiene un tiempo de servicio p95 de 10 segundos. El equipo está interesado en bajar este tiempo para mejorar la experiencia del usuario (y porque nos gusta pensar en Kimche como un Ferrari). ¿Qué propondrías para enfrentar el problema? Esta pregunta es abierta, no hay respuestas malas. Puedes proponer arquitectura, tecnologías, diseño, etc."
+
+### Respuesta:
+1) Hacer una migración, si posible, para un BDD No relacional del tipo columnar (para que sea más eficiente y enfocado en grandes cantidades de datos, como Cassandra).
+2) Si no es posible, verificar si todos los datos necesitan ser leídos en la tabla de manera secuencial, pues sería posible crear sub tablas para acceder por medio de views;
+3) Si no se puede cambiar el BDD ni cambiar la tabla, verificar si hay datos repetidos en la tabla, pues lo ideal sería hacer una normalización de datos;
+
 
 ## Instrucciones
 
