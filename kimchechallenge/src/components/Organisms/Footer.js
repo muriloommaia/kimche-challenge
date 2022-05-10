@@ -26,8 +26,8 @@ export default function Footer() {
           >
             <Paragraph color='secondary'>
               Tecnologias utilizadas:
-              <Line height='1px' color='secondary' />
             </Paragraph>
+            <Line height='1px' color='secondary' />
             <Paragraph color='secondary'>
               JavaScript
             </Paragraph>
@@ -49,8 +49,8 @@ export default function Footer() {
           >
             <Paragraph color='secondary'>
               Mi contacto:
-              <Line height='1px' color='secondary' />
             </Paragraph>
+            <Line height='1px' color='secondary' />
             <Paragraph color='secondary'>
               <a href='https://www.linkedin.com/in/murilommaia' target='_blank' rel='noreferrer'>
                 <i className='fa-brands fa-linkedin' />
