@@ -14,6 +14,7 @@ Link a la app en producción: https://kimche-challenge-murilo.herokuapp.com/
 2) Si no es posible, verificar si todos los datos necesitan ser leídos en la tabla de manera secuencial, pues sería posible crear sub tablas para acceder por medio de views;
 3) Si no se puede cambiar el BDD ni cambiar la tabla, verificar si hay datos repetidos en la tabla, pues lo ideal sería hacer una normalización de datos;
 
+
 ## Proyecto hecho con:
 
 **Frontend**
@@ -21,7 +22,7 @@ Link a la app en producción: https://kimche-challenge-murilo.herokuapp.com/
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white) ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
 
 
-**Testes**
+**Tests**
 
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
@@ -59,6 +60,77 @@ Para dar baja en el container, ejecute:
 ```bash
 yarn compose:down
 ```
+
+</details>
+
+<br />
+
+## Estructura de Proyecto
+<details> 
+  <summary>Ver estructura</summary>
+
+Estructura a partir del directorio `src`:
+
+  ```bash
+├── api
+│   └── client.js
+├── App.css
+├── App.js
+├── App.test.js
+├── assets
+│   └── images
+│       ├── blizzard.png
+│       └── points.png
+├── components
+│   ├── Atoms
+│   │   ├── Button.js
+│   │   ├── Input.js
+│   │   ├── Line.js
+│   │   ├── Paragraph.js
+│   │   └── Title.js
+│   ├── Containers
+│   │   ├── Container.Background.js
+│   │   ├── Container.Box.Country.js
+│   │   ├── Container.media.js
+│   │   ├── Container.Result.js
+│   │   ├── Flex.js
+│   │   └── Grid.js
+│   └── Organisms
+│       ├── Filters.js
+│       ├── Footer.js
+│       ├── Header.js
+│       ├── Loading
+│       │   ├── Loading.Display.js
+│       │   ├── Loading.js
+│       │   └── Loading.Point.js
+│       └── ResultField
+│           ├── BoxGroup.js
+│           ├── SearchResult.js
+│           └── UniqueBox.js
+├── Hooks
+│   ├── useCountry
+│   │   └── index.js
+│   └── usePagination
+│       └── usePagination.js
+├── index.css
+├── index.js
+├── logo.svg
+├── Pages
+│   └── Home.js
+├── redux
+│   ├── slices
+│   │   ├── country.slice.js
+│   │   ├── filter.slice.js
+│   │   └── filter.slice.test.js
+│   └── store
+│       └── index.js
+├── services
+│   └── countryService.js
+├── serviceWorker.js
+├── setupTests.js
+├── Style
+│   └── themeStyle.js
+  ```
 
 </details>
 
